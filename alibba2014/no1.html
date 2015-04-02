@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>2014阿里巴巴前端线上笔试题</title>
+		<style>
+		.box {
+		background-color:green;
+		display:-moz-box;
+		display:-webkit-box;
+		display:box;
+		height:50px;
+		line-height:30px;
+		text-indent:10px;
+		width:100%;
+		}
+		.item {
+		box-flex:1;
+		-moz-box-flex:1;
+		-webkit-box-flex:1;
+		margin:10px;
+		background:#fff
+		}
+		.item:first-child {
+		box-flex:0;
+		-moz-box-flex:0;
+		-webkit-box-flex:0;
+		width:200px;
+		background:#fff;
+		margin:10px
+		}
+		.item:nth-child(2) {
+		margin:10px 0
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="item">column 1</div>
+			<div class="item">column 2</div>
+			<div class="item">column 3</div>
+		</div>
+	</body>
+</html>

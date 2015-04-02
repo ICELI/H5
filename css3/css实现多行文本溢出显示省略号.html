@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.test
+{
+width:100px; overflow: hidden;text-overflow: ellipsis;
+border:1px solid #000000;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+}
+div.test:hover
+{
+text-overflow:inherit;
+overflow:visible;
+}
+</style>
+</head>
+<body>
+<p>如果您把光标移动到下面两个 div 上，就能够看到全部文本。</p>
+<p>这个 div 使用 “text-overflow:ellipsis” ：</p>
+<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the boxThis is some long text that will not fit in the boxThis is some long text that will not fit in the boxThis is some long text that will not fit in the boxThis is some long text that will not fit in the box</div>
+<p>这个 div 使用 “text-overflow:clip”：</p>
+<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------
+-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 css 规范草案中。
+限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他外来的WebKit属性。常见结合属性：
+display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
+-webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+text-overflow，可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。
+ 
+只在webkit内核的浏览器有用，可以用在MOB端页面的开发
+</body>
+</html>
